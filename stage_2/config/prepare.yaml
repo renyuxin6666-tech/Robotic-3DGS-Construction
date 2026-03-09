@@ -1,0 +1,33 @@
+# 阶段 2 数据预处理配置
+# 目标：将 Stage 1 的全局图像加工为局部裁剪样本
+
+dataset:
+  # Stage 1 的输出目录 (输入源)
+  # 假设 stage_1 和 stage_2 是同级目录
+  input_dir: "../stage_1/data/fibonacci_rendered"
+  
+  # Stage 2 的输出目录
+  output_dir: "data/prepared_fibonacci"
+  
+  # 使用的图像通道 (此处仅使用 mask 以节约算力)
+  # 可选: mask, normal, clay
+  channels: ["mask"]
+
+processing:
+  # 局部裁剪配置
+  crop:
+    enabled: true
+    # 每个全局视角生成的局部样本数量
+    num_crops_per_view: 5
+    # 裁剪框相对于原图的尺寸比例范围 (例如 0.3 到 0.6)
+    scale_range: [0.3, 0.6]
+    # 裁剪框必须包含的前景像素比例下限 (防止切到全白背景)
+    min_foreground_ratio: 0.1
+
+  # 数据集划分比例
+  split:
+    train: 0.8
+    val: 0.1
+    test: 0.1
+    # 随机种子，保证划分可复现
+    seed: 42

@@ -1,0 +1,21 @@
+# Stage 1: Fibonacci Lattice Rendering Configuration
+# 使用斐波那契球面采样生成训练数据
+
+# 渲染设置
+render:
+  resolution: 512          # 渲染分辨率 (512x512)
+  background_color: [1, 1, 1] # 白色背景 (RGB)
+  object_color: [0, 0, 0]     # 黑色物体 (RGB) - 用于生成 Mask
+  anti_aliasing: true         # 开启抗锯齿
+
+# 相机采样设置
+camera:
+  sampling_method: "fibonacci" # 采样方法
+  num_views: 1000              # 采样点数 (N=1000, 约6.5度间隔)
+  fov: 30                      # 视场角 (度)
+  distance_scale: 1.5          # 相机距离缩放系数 (1.5倍包围球半径)
+
+# 路径设置
+paths:
+  input_dir: "stage_1/assets/branches_3d/log_model" # 输入模型目录
+  output_dir: "stage_1/data/fibonacci_rendered"     # 输出图像目录

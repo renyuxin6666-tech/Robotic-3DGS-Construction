@@ -1,0 +1,18 @@
+pipeline:
+  top_k: 5
+  confidence_threshold: 0.5
+  use_refinement: false # Optional for now
+
+model:
+  checkpoint_path: "../stage_3_new/best.ckpt"
+  backbone: "resnet18"
+  embedding_dim: 128
+  image_size: 224
+
+index:
+  index_file: "../stage_4_new/data/index/vector.index"
+  meta_file: "../stage_4_new/data/index/meta.pkl"
+
+input:
+  # Default input settings
+  image_ext: ".png"

@@ -1,0 +1,19 @@
+index:
+  type: "Flat"
+  metric: "L2"
+  dim: 128
+
+paths:
+  # Model from stage_3_new (relative to stage_4_new root)
+  model_checkpoint: "../stage_3_new/best.ckpt"
+  # Data from stage_1/data/fibonacci_rendered
+  data_root: "../stage_1/data/fibonacci_rendered"
+  # Output in stage_4_new/data/index
+  index_dir: "data/index"
+  index_file: "vector.index"
+  meta_file: "meta.pkl"
+
+model:
+  backbone: "resnet18"
+  embedding_dim: 128
+  image_size: 224

@@ -1,0 +1,17 @@
+# 渲染输出
+render:
+  width: 640
+  height: 480
+  format: PNG
+
+# 相机参数
+camera:
+  radius: 1.5
+  fov_deg: 50
+  azimuth_step_deg: 15
+  elevation_deg: [-30, 0, 30]
+
+# 路径
+paths:
+  mesh_dir: assets/branches_3d
+  output_dir: data/rendered

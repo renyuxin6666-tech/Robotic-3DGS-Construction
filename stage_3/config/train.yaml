@@ -1,0 +1,39 @@
+# 阶段 3 训练配置
+# 目标：训练一个最小可用的 Embedding 模型
+
+data:
+  # Stage 2 的输出目录
+  root_dir: "../stage_2/data/prepared_fibonacci"
+  # 图像尺寸 (训练时统一缩放)
+  image_size: 224
+  # DataLoader 配置
+  batch_size: 32
+  num_workers: 4
+
+model:
+  # 骨干网络 (使用轻量级 ResNet18)
+  backbone: "resnet18"
+  # 是否加载预训练权重
+  pretrained: true
+  # Embedding 维度
+  embedding_dim: 128
+
+loss:
+  # 对比损失的温度系数
+  temperature: 0.07
+
+optimizer:
+  # 学习率
+  lr: 0.001
+  # 权重衰减
+  weight_decay: 0.0001
+
+training:
+  # 训练轮数
+  epochs: 10
+  # 多少个 batch 打印一次日志
+  log_interval: 10
+  # 输出目录
+  output_dir: "outputs/exp_minimal"
+  # 随机种子
+  seed: 42

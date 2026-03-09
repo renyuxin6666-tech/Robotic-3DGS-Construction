@@ -1,5 +1,11 @@
 # Spatial Model for Branch Recognition & Pose Estimation
 ## 树枝识别与位姿估计空间模型工程
+![vis_best_微信图片_20260117172130_342_531](https://github.com/user-attachments/assets/b22190ff-154b-470d-a2d2-b460735d9479)
+![vis_best_微信图片_20260117172101_340_531](https://github.com/user-attachments/assets/f31f90ef-c802-432e-b950-2e26f47f2b4e)
+<img width="1110" height="762" alt="mask_best_微信图片_20260117172130_342_531" src="https://github.com/user-attachments/assets/647c380b-b39b-4fa2-aa82-4aa9e947cc95" />
+<img width="1218" height="1122" alt="mask_best_微信图片_20260117172101_340_531" src="https://github.com/user-attachments/assets/010f6242-2462-4d0d-8984-1687cd499c23" />
+<img width="1729" height="1047" alt="image" src="https://github.com/user-attachments/assets/59429784-fc0e-4401-a805-ea5df9c9a5a6" />
+
 
 本工程旨在实现基于双目视觉和机械臂环境下的树枝识别、姿态估计及抓取辅助。项目分为五个阶段，从数据生成到模型部署，形成了一套完整的技术闭环。
 
